@@ -89,10 +89,9 @@ export default async function Home({
         previousFrame={previousFrame}
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
-        <FrameImage aspectRatio="1.91:1" src="https://www.raidguild.org/_next/static/media/raidguild.f7e2c25d.webp">
+        <FrameImage aspectRatio="1.91:1">
           <div tw="w-full h-full bg-slate-700 text-white justify-center items-center">
-            <div tw="text-3xl font-bold">Raid Guild</div>
-            <div tw="text-xl">Builders of the Decentralized Web</div>
+            Raid Guild builders of the decentralized web
           </div>
         </FrameImage>
         <FrameInput text="put some text here" />
