@@ -89,9 +89,9 @@ export default async function Home({
         previousFrame={previousFrame}
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
-        <FrameImage aspectRatio="1.91:1">
+        <FrameImage aspectRatio="1.91:1" src="https://www.raidguild.org/_next/static/media/raidguild.f7e2c25d.webp">
           <div tw="w-full h-full bg-slate-700 text-white justify-center items-center">
-            {frameMessage?.inputText ? frameMessage.inputText : "Hello world"}
+            Raid Guild
           </div>
         </FrameImage>
         <FrameInput text="put some text here" />
@@ -101,8 +101,11 @@ export default async function Home({
         <FrameButton>
           {state?.active === "2" ? "Active" : "Inactive"}
         </FrameButton>
-        <FrameButton action="link" target={`https://www.google.com`}>
-          External
+        <FrameButton action="link" target={`https://www.raidguild.org/hire/1`}>
+          Hire Us
+        </FrameButton>
+        <FrameButton action="link" target={`https://www.raidguild.org/join/1`}>
+          Join Us
         </FrameButton>
       </FrameContainer>
     </div>
