@@ -90,16 +90,14 @@ export default async function Home({
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
         <FrameImage aspectRatio="1.91:1" src="https://www.raidguild.org/_next/static/media/raidguild.f7e2c25d.webp">
-          <div tw="w-full h-full bg-slate-700 text-white justify-center items-center">
-            Raid Guild
+          <div tw="w-full h-full bg-red-300 text-white justify-center items-center">
+            <div tw="text-3xl font-bold">Raid Guild</div>
+            <div tw="text-xl">Builders of the Decentralized Web</div>
           </div>
         </FrameImage>
         <FrameInput text="put some text here" />
         <FrameButton>
-          {state?.active === "1" ? "Active" : "Inactive"}
-        </FrameButton>
-        <FrameButton>
-          {state?.active === "2" ? "Active" : "Inactive"}
+          Portfolio
         </FrameButton>
         <FrameButton action="link" target={`https://www.raidguild.org/hire/1`}>
           Hire Us
