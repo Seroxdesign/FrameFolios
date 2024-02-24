@@ -11,7 +11,7 @@ import {
 } from "frames.js/next/server";
 import Link from "next/link";
 import { DEBUG_HUB_OPTIONS } from "./debug/constants";
-
+import { useState } from "react";
 type State = {
   active: string;
   total_button_presses: number;
@@ -73,7 +73,7 @@ export default async function Home({
   }
 
   const baseUrl = process.env.NEXT_PUBLIC_HOST || "http://localhost:3000";
-
+  const [frameState, setFrameState] = useState<number>(0);
   // then, when done, return next frame
   return (
     <div className="p-4">
@@ -89,9 +89,9 @@ export default async function Home({
         previousFrame={previousFrame}
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
-        <FrameImage aspectRatio="1.91:1" src={"https://frame-folios.vercel.app/api/image/1"} />
+        <FrameImage aspectRatio="1.91:1" src={`https://frame-folios.vercel.app/api/image?id=${frameState}`} />
         <FrameInput text="put some text here" />
-        <FrameButton >
+        <FrameButton action='post' >
           Portfolio
         </FrameButton>
         <FrameButton action="link" target={`https://www.raidguild.org/hire/1`}>

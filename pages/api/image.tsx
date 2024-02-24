@@ -11,8 +11,8 @@ let fontData = fs.readFileSync(fontPath)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     try {
-       const { n } = req.query;
-       const raid = raids[n];
+    const { id } = req.query;
+       const raid = raids[+(id as string) || 0];
         const svg = await satori(
             <div style={{
                 justifyContent: 'flex-start',
@@ -39,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                         borderRadius: 4,
                         whiteSpace: 'nowrap',
                         overflow: 'visible',
-                    }}>{raid.description}</div>
+                    }}>{`${id}`}</div>
                 </div>
             </div>
             ,
