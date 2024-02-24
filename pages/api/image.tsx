@@ -9,8 +9,10 @@ const fontPath = join(process.cwd(), 'Roboto-Regular.ttf')
 let fontData = fs.readFileSync(fontPath)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
     try {
-        const raid = raids[0];
+       const { n } = req.query;
+       const raid = raids[n];
         const svg = await satori(
             <div style={{
                 justifyContent: 'flex-start',

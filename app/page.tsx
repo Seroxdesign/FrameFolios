@@ -89,7 +89,7 @@ export default async function Home({
         previousFrame={previousFrame}
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
-        <FrameImage aspectRatio="1.91:1" src={"https://frame-folios.vercel.app/api/image"} />
+        <FrameImage aspectRatio="1.91:1" src={"https://frame-folios.vercel.app/api/image/1"} />
         <FrameInput text="put some text here" />
         <FrameButton >
           Portfolio
