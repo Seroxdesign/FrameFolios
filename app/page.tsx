@@ -32,6 +32,7 @@ const reducer: FrameReducer<State> = (state, action) => {
 export default async function Home({
   params,
   searchParams,
+
 }: NextServerPageProps) {
   const previousFrame = getPreviousFrame<State>(searchParams);
 
@@ -50,9 +51,8 @@ export default async function Home({
   );
 
   // Here: do a server side side effect either sync or async (using await), such as minting an NFT if you want.
-  // example: load the users credentials & check they have an NFT
+  // example: load the users credentials & check they have an NF
 
-  console.log("info: state is:", state);
 
   if (frameMessage) {
     const {
@@ -89,11 +89,7 @@ export default async function Home({
         previousFrame={previousFrame}
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
-        <FrameImage aspectRatio="1.91:1">
-          <div tw="w-full h-full bg-slate-700 text-white justify-center items-center">
-            Raid Guild builders of the decentralized web
-          </div>
-        </FrameImage>
+        <FrameImage aspectRatio="1.91:1" src={"https://frame-folios.vercel.app/api/image"} />
         <FrameInput text="put some text here" />
         <FrameButton >
           Portfolio
